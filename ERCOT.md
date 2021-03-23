@@ -42,13 +42,13 @@ import h5py
 import pandas as pd
 import s3fs
 
-s3_path = 'S3://arpa-e-perform/ERCOT/2018/Wind/Actuals/BA_level/BA_wind_actuals_2018.h5'
+s3_path = 's3://arpa-e-perform/ERCOT/2018/Wind/Actuals/BA_level/BA_wind_actuals_2018.h5'
 fs = s3fs.S3FileSystem(anon=True)
 with fs.open(s3_path, 'rb') as s3:
-  with h5py.File(s3_path, 'r') as f:
-    df_meta = pd.DataFrame(f['data/meta'][...])
-    time_index = pd.Datetime_index(f['data/time-index'][...])
-    wind_actuals = f['data/forecasts'][...]
+  with h5py.File(s3, 'r') as f:
+    df_meta = pd.DataFrame(f['meta'][...])
+    time_index = pd.DatetimeIndex(f['time-index'][...])
+    wind_actuals = f['actuals'][...]
 ```
 
 ### Solar actual
@@ -61,13 +61,13 @@ import h5py
 import pandas as pd
 import s3fs
 
-s3_path = 'S3://arpa-e-perform/ERCOT/2018/Solar/Actuals/BA_level/BA_solar_actuals_2018.h5'
+s3_path = 's3://arpa-e-perform/ERCOT/2018/Solar/Actuals/BA_level/BA_solar_actuals_2018.h5'
 fs = s3fs.S3FileSystem(anon=True)
 with fs.open(s3_path, 'rb') as s3:
-  with h5py.File(s3_path, 'r') as f:
-    df_meta = pd.DataFrame(f['data/meta'][...])
-    time_index = pd.Datetime_index(f['data/time-index'][...])
-    solar_actuals = f['data/forecasts'][...]
+  with h5py.File(s3, 'r') as f:
+    df_meta = pd.DataFrame(f['meta'][...])
+    time_index = pd.DatetimeIndex(f['time-index'][...])
+    solar_actuals = f['actuals'][...]
 ```
 
 ### Wind intra-hour forecasts
@@ -81,13 +81,14 @@ import h5py
 import pandas as pd
 import s3fs
 
-s3_path = 'S3://arpa-e-perform/ERCOT/2018/Wind/Forecasts/Intra-hour/BA_level/BA_wind_intra-hour_fcst_2018.h5'
+s3_path = 's3://arpa-e-perform/ERCOT/2018/Wind/Forecasts/Intra-hour/BA_level/BA_wind_intra-hour_fcst_2018.h5'
 fs = s3fs.S3FileSystem(anon=True)
 with fs.open(s3_path, 'rb') as s3:
-  with h5py.File(s3_path, 'r') as f:
-    df_meta = pd.DataFrame(f['data/meta'][...])
-    time_index = pd.Datetime_index(f['data/time-index'][...])
-    wind_fcsts= f['data/forecasts'][...]
+  with h5py.File(s3, 'r') as f:
+    df_meta = pd.DataFrame(f['meta'][...])
+    issue_time = pd.DatetimeIndex(f['issue_time'][...])
+    forecast_time = pd.DatetimeIndex(f['forecat_time'][...])
+    wind_fcsts= f['forecasts'][...]
 ```
 
 ### Solar intra-hour forecasts
@@ -101,13 +102,14 @@ import h5py
 import pandas as pd
 import s3fs
 
-s3_path = 'S3://arpa-e-perform/ERCOT/2018/Solar/Forecasts/Intra-hour/BA_level/BA_solar_intra-hour_fcst_2018.h5'
+s3_path = 's3://arpa-e-perform/ERCOT/2018/Solar/Forecasts/Intra-hour/BA_level/BA_solar_intra-hour_fcst_2018.h5'
 fs = s3fs.S3FileSystem(anon=True)
 with fs.open(s3_path, 'rb') as s3:
-  with h5py.File(s3_path, 'r') as f:
-    df_meta = pd.DataFrame(f['data/meta'][...])
-    time_index = pd.Datetime_index(f['data/time-index'][...])
-    solar_fcsts = f['data/forecasts'][...]
+  with h5py.File(s3, 'r') as f:
+    df_meta = pd.DataFrame(f['meta'][...])
+    issue_time = pd.DatetimeIndex(f['issue_time'][...])
+    forecast_time = pd.DatetimeIndex(f['forecat_time'][...])
+    solar_fcsts = f['forecasts'][...]
 ```
 
 ### Load intra-hour forecasts
@@ -124,12 +126,10 @@ import s3fs
 s3_path = 'S3://arpa-e-perform/ERCOT/2018/Load/Forecasts/Intra-hour/BA_level/BA_load_intra-hour_fcst_2018.h5'
 fs = s3fs.S3FileSystem(anon=True)
 with fs.open(s3_path, 'rb') as s3:
-  with h5py.File(s3_path, 'r') as f:
+  with h5py.File(s3, 'r') as f:
     df_meta = pd.DataFrame(f['meta'][...])
-    issue_time = pd.Datetime_index(f['issue_time'][...])
-    horizon_time = pd.Datetime_index(f['issue_time'][...])
-    load_actuals = f['actuals'][...]
-    load_fcsts = f['forecast'][...]
+    issue_time = pd.DatetimeIndex(f['issue_time'][...])
+    forecast_time = pd.DatetimeIndex(f['forecat_time'][...])
 ```
 
 ## CHANGLOG
