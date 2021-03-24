@@ -31,7 +31,23 @@ The following variables are provided for ERCOT:
 
 ## Python Examples
 
-Example scripts to extract solar resource data using python are provided below:
+Example scripts to extract solar resource data using python are provided below.
+Please note that the below examples will ATTEMPT to access the data directly
+from AWS. The performance of these examples will be highly dependant on your
+internet connection and the file size. If you run into issues please try
+downloading the file of interest and access the file directly:
+
+```python
+import h5py
+import pandas as pd
+
+local_path = './BA_wind_actuals_2018.h5'
+with h5py.File(local_path, 'r') as f:
+  df_meta = pd.DataFrame(f['meta'][...])
+  time_index = pd.DatetimeIndex(f['time-index'][...])
+  wind_actuals = f['actuals'][...]
+```
+
 ### Wind actual
 Wind meta data, time index (time stamps), and actual power time series are
 provided at multiple spatial-levels (site, BA, Zone). Below is an example of
@@ -133,6 +149,9 @@ with fs.open(s3_path, 'rb') as s3:
 ```
 
 ## CHANGLOG
+
+### Wind Actuals
+- Fix name of "time-index" dataset in BA_wind_actuals_2018.h5
 ### Load Forecasts
 - Fixed code which affected distribution of forecasts
 - Added last Day-ahead issue time forecast
@@ -161,7 +180,6 @@ with fs.open(s3_path, 'rb') as s3:
 - Added 51 members of ECMWF-based solar and wind day-ahead and intra-hour forecasts
 
 ### Change file naming convetion to:
-
 #### Load Actuals
 - BA_load_actuals_2018.h5
 - Zone_Far_West_load_actuals_2018.h5
