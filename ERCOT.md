@@ -179,6 +179,8 @@ with fs.open(s3_path, 'rb') as s3:
 
 ### ECMWF-based deterministic power forecasts
 - Added 51 members of ECMWF-based solar and wind day-ahead and intra-hour forecasts
+- Fixed the Zone_East files for wind
+- Fixed the Zone_Southern files for solar
 
 ### Change file naming convetion to:
 #### Load Actuals
@@ -192,7 +194,7 @@ with fs.open(s3_path, 'rb') as s3:
 - Zone_Far_West_solar_actuals_Existing_2018.h5
 - Site_Noble_Solar_solar_actuals_2018.h5
 
-#### Solar Actuals
+#### Wind Actuals
 - BA_wind_actuals_2018.h5
 - BA_wind_actuals_Existing_2018.h5
 - Zone_Far_West_wind_actuals_2018.h5
