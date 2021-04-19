@@ -166,6 +166,8 @@ with fs.open(s3_path, 'rb') as s3:
 - Updated distribution of forecasts
 - Updated the zone-level forecasts
 - Changed the dtype of time stamps to characters
+- Fixed lead time
+- Added existing scenarios
 
 ### Day-ahead and intra-hour wind forecasts
 - Fixed the issue time of day-ahead wind forecasts to UTC
@@ -173,6 +175,8 @@ with fs.open(s3_path, 'rb') as s3:
 - Updated the zone-level forecasts
 - Updated the BA-level forecasts
 - Changed the dtype of time stamps to characters
+- Fixed lead time
+- Added existing scenarios
 
 ### Meta data
 - Solar meta data is cleaned and updated
@@ -181,6 +185,7 @@ with fs.open(s3_path, 'rb') as s3:
 - Added 51 members of ECMWF-based solar and wind day-ahead and intra-hour forecasts
 - Fixed the Zone_East files for wind
 - Fixed the Zone_Southern files for solar
+- Regenerated files to fix the time index, dataset names, and file names
 
 ### Change file naming convetion to:
 #### Load Actuals
