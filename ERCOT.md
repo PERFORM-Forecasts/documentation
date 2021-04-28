@@ -161,7 +161,7 @@ with fs.open(s3_path, 'rb') as s3:
 - Corrected Actual downsampling error.
 - Adjusted error in BA Day-ahead timestamp.
 
-### Day-ahead and intra-hour solar forecasts
+### Day-ahead and intra-day solar forecasts
 - Fixed the issue time of day-ahead solar forecasts to UTC
 - Updated distribution of forecasts
 - Updated the zone-level forecasts
@@ -169,7 +169,7 @@ with fs.open(s3_path, 'rb') as s3:
 - Fixed lead time
 - Added existing scenarios
 
-### Day-ahead and intra-hour wind forecasts
+### Day-ahead and intra-day wind forecasts
 - Fixed the issue time of day-ahead wind forecasts to UTC
 - Updated distribution of forecasts
 - Updated the zone-level forecasts
@@ -186,6 +186,7 @@ with fs.open(s3_path, 'rb') as s3:
 - Fixed the Zone_East files for wind
 - Fixed the Zone_Southern files for solar
 - Regenerated files to fix the time index, dataset names, and file names
+- Added the second day forecasts for the day-ahead forecasts.
 
 ### Change file naming convetion to:
 #### Load Actuals
