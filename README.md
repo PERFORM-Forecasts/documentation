@@ -173,7 +173,7 @@ contain the following datasets with following shapes:
   - time_index (time-steps, )
 
 ### Forecasts
-  - forecasts (time-steps, 100 # percentiles)
+  - forecasts (time-steps, 99 # percentiles)
   - meta (1,) # Forecasts are provided by size, zone, or BA
   - issue_time (time-steps, )
   - forecast_time (time-steps, )
