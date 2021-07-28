@@ -44,7 +44,7 @@ import pandas as pd
 local_path = './BA_wind_actuals_2018.h5'
 with h5py.File(local_path, 'r') as f:
   df_meta = pd.DataFrame(f['meta'][...])
-  time_index = pd.DatetimeIndex(f['time_index'][...].astype(str))
+  time_index = pd.to_datetime(f['time_index'][...].astype(str))
   wind_actuals = f['actuals'][...]
 ```
 
@@ -63,7 +63,7 @@ fs = s3fs.S3FileSystem(anon=True)
 with fs.open(s3_path, 'rb') as s3:
   with h5py.File(s3, 'r') as f:
     df_meta = pd.DataFrame(f['meta'][...])
-    time_index = pd.DatetimeIndex(f['time_index'][...].astype(str))
+    time_index = pd.to_datetime(f['time_index'][...].astype(str))
     wind_actuals = f['actuals'][...]
 ```
 
@@ -82,7 +82,7 @@ fs = s3fs.S3FileSystem(anon=True)
 with fs.open(s3_path, 'rb') as s3:
   with h5py.File(s3, 'r') as f:
     df_meta = pd.DataFrame(f['meta'][...])
-    time_index = pd.DatetimeIndex(f['time_index'][...].astype(str))
+    time_index = pd.to_datetime(f['time_index'][...].astype(str))
     solar_actuals = f['actuals'][...]
 ```
 
@@ -102,8 +102,8 @@ fs = s3fs.S3FileSystem(anon=True)
 with fs.open(s3_path, 'rb') as s3:
   with h5py.File(s3, 'r') as f:
     df_meta = pd.DataFrame(f['meta'][...])
-    issue_time = pd.DatetimeIndex(f['issue_time'][...].astype(str))
-    forecast_time = pd.DatetimeIndex(f['forecat_time'][...].astype(str))
+    issue_time = pd.to_datetime(f['issue_time'][...].astype(str))
+    forecast_time = pd.to_datetime(f['forecat_time'][...].astype(str))
     wind_fcsts= f['forecasts'][...]
 ```
 
@@ -123,8 +123,8 @@ fs = s3fs.S3FileSystem(anon=True)
 with fs.open(s3_path, 'rb') as s3:
   with h5py.File(s3, 'r') as f:
     df_meta = pd.DataFrame(f['meta'][...])
-    issue_time = pd.DatetimeIndex(f['issue_time'][...].astype(str))
-    forecast_time = pd.DatetimeIndex(f['forecat_time'][...].astype(str))
+    issue_time = pd.to_datetime(f['issue_time'][...].astype(str))
+    forecast_time = pd.to_datetime(f['forecat_time'][...].astype(str))
     solar_fcsts = f['forecasts'][...]
 ```
 
@@ -144,8 +144,8 @@ fs = s3fs.S3FileSystem(anon=True)
 with fs.open(s3_path, 'rb') as s3:
   with h5py.File(s3, 'r') as f:
     df_meta = pd.DataFrame(f['meta'][...])
-    issue_time = pd.DatetimeIndex(f['issue_time'][...].astype(str))
-    forecast_time = pd.DatetimeIndex(f['forecat_time'][...].astype(str))
+    issue_time = pd.to_datetime(f['issue_time'][...].astype(str))
+    forecast_time = pd.to_datetime(f['forecat_time'][...].astype(str))
 ```
 
 ## CHANGLOG
