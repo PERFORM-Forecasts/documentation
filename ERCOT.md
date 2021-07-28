@@ -177,6 +177,7 @@ with fs.open(s3_path, 'rb') as s3:
 - Changed the dtype of time stamps to characters
 - Fixed lead time
 - Added existing scenarios
+- Fixed the day-ahead issue time stamp
 
 ### Meta data
 - Solar meta data is cleaned and updated
