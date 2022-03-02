@@ -85,6 +85,8 @@ converted to probabilistic forecasts by the adaptive Gaussian model.
 The ARPA-E PERFORM data is made available as a series of .h5 files and can be
 found at:
 `s3://arpa-e-perform/`
+
+The ERCOT sub-dataset is used as an example, datasets for other ISOs have similar structure and format.
 - ERCOT/
   - MetaData/
     - solar_meta.xlxs
