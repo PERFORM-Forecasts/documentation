@@ -28,7 +28,7 @@ forecasts time series. Both actuals and forecasts are provided in form of
 time-series with high temporal and spatial fidelity. Both deterministic and
 probabilistic forecasts are contained in the dataset.
 
-[return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL)
+([return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL))
 
 ## Dataset description
 
@@ -51,9 +51,7 @@ Data for ERCOT is available for 2017-2018, whereas data for the other three ISOs
 
 Please be aware that all timeseries data is published in UTC. 
 
-Additional data on the methods for generating the data sets can be found below.
-
-[return to top](#ARPA-E-PERFORM-Datasets-produce-by-NREL)
+Additional data on the methods for generating each of the components of the data sets can be found in the following sections.
 
 ### Actuals
 
@@ -104,7 +102,7 @@ ensemble. Recurrent neural network, convolutional neural network, and extreme
 gradient boosting are used to generate deterministic forecasts, which are
 converted to probabilistic forecasts by the adaptive Gaussian model.
 
-[return to top](#ARPA-E-PERFORM-Datasets-produce-by-NREL)
+([return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL))
 
 ## Dataset access
 
@@ -113,7 +111,7 @@ found on AWS at `s3://arpa-e-perform/` or via its Open Energy Data Initiative (O
 
 The registry for the dataset can be found at [https://registry.opendata.aws/arpa-e-perform/](https://registry.opendata.aws/arpa-e-perform/).
 
-[return to top](#ARPA-E-PERFORM-Datasets-produce-by-NREL)
+([return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL))
 
 ## Directory structure
 
@@ -184,7 +182,7 @@ where ISO={ERCOT,MISO,NYISO,SPP}, YEAR={2017,2018,2019} (ISO dependent), and SIT
 
 \* Note that forecast data is only available for 1 of the 2 years (2018 for ERCOT and 2019 for MISO, NYISO, and SPP).
   
-[return to top](#ARPA-E-PERFORM-Datasets-produce-by-NREL)
+([return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL))
 
 ## File format
 
@@ -204,4 +202,4 @@ contain the following datasets with following shapes:
 
 Examples for working with h5 file format can be found in the [ERCOT_demo.md](ERCOT_demo.md).
 
-[return to top](#ARPA-E-PERFORM-Datasets-produce-by-NREL)
+([return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL))
