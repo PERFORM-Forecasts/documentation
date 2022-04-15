@@ -1,4 +1,4 @@
-# ARPA-E PERFORM Datasets produced by NREL
+# ARPA-E PERFORM datasets produced by NREL
 
 [Overview of the ARPA-E PERFORM project](#Overview-of-the-ARPA-E-PERFORM-project)  
 [Dataset description](#Dataset-description)  
@@ -28,7 +28,7 @@ forecasts time series. Both actuals and forecasts are provided in form of
 time-series with high temporal and spatial fidelity. Both deterministic and
 probabilistic forecasts are contained in the dataset.
 
-[return to top](#ARPA-E-PERFORM-Datasets-produce-by-NREL)
+[return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL)
 
 ## Dataset description
 
