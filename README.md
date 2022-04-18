@@ -111,6 +111,8 @@ found on AWS at `s3://arpa-e-perform/` or via its Open Energy Data Initiative (O
 
 The registry for the dataset can be found at [https://registry.opendata.aws/arpa-e-perform/](https://registry.opendata.aws/arpa-e-perform/).
 
+Examples for accessing AWS S3 data via python can be found in the [ERCOT_demo.md](ERCOT_demo.md).
+
 ([return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL))
 
 ## Directory structure
