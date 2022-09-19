@@ -83,8 +83,16 @@ operational characterstics. Day-ahead forecasts are generated with a
 update rate. Intra-day forecasts are generated with a 6-hour-ahead lead time,
 a 6-hour horizon, an hourly resolution, and a 6-hour update rate. Intra-hour
 forecasts are generated with a 1-hour-ahead lead time, a 2-hour horizon, a
-15-minute resolution, and a hourly update rate. Probabilistic forecasts are in
-the form of 1-99 percentiles.
+15-minute resolution, and a hourly update rate. The figure below provides an overview
+of how lead time, horizon, resolution, and update rate combine to describe the temporal
+aspects of a forecast.
+
+| ![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/6035236/191108128-08fd7ef8-18d1-4638-b815-e4a3c2ffaf77.png) |
+|:--:|
+| Image source: Doubleday, Van Scyoc Hernandez, and Hodge, "Benchmark probabilistic solar forecasts: Characteristics and recommendations", <i>Solar Energy</i> (206) 2020. |
+
+
+Probabilistic forecasts are in the form of 1-99 percentiles.
 
 #### Solar and wind forecasts
 
@@ -107,9 +115,9 @@ converted to probabilistic forecasts by the adaptive Gaussian model.
 ## Dataset access
 
 The ARPA-E PERFORM data is made available as a series of .h5 files and can be
-found on AWS at `s3://arpa-e-perform/` or via its Open Energy Data Initiative (OEDI) catalog page at [https://data.openei.org/s3_viewer?bucket=arpa-e-perform](https://data.openei.org/s3_viewer?bucket=arpa-e-perform).
+found on AWS at `s3://arpa-e-perform/`. The AWS registry for the data is located at [https://registry.opendata.aws/arpa-e-perform/](https://registry.opendata.aws/arpa-e-perform/).
 
-The registry for the dataset can be found at [https://registry.opendata.aws/arpa-e-perform/](https://registry.opendata.aws/arpa-e-perform/).
+Information on the dataset can also be viewed via its Open Energy Data Initiative (OEDI) catalog page at [https://data.openei.org/submissions/5772](https://data.openei.org/submissions/5772).
 
 Examples for accessing AWS S3 data via python can be found in the [ERCOT_demo.md](ERCOT_demo.md).
 
