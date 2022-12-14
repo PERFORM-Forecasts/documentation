@@ -5,6 +5,7 @@
 [Dataset access](#Dataset-access)  
 [Directory structure](#Directory-structure)  
 [File format](#File-format)  
+[Recommended citation](#Recommended-citation)  
 
 ## Overview of the ARPA-E PERFORM project
 
@@ -213,3 +214,7 @@ contain the following datasets with following shapes:
 Examples for working with h5 file format can be found in the [ERCOT_demo.md](ERCOT_demo.md).
 
 ([return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL))
+
+## Recommended citation
+
+> Sergi, Brian, Feng, Cong, Zhang, Flora, Hodge, Bri-Mathias, Ring-Jarvi, Ross, Bryce, Richard, Doubleday, Kate, Rose, Megan, Buster, Grant, and Rossol, > Michael. 2022. "ARPA-E PERFORM datasets". United States. https://dx.doi.org/10.25984/1891136. https://data.openei.org/submissions/5772.
