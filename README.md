@@ -218,3 +218,5 @@ Examples for working with h5 file format can be found in the [ERCOT_demo.md](ERC
 ## Recommended citation
 
 > Sergi, Brian, Feng, Cong, Zhang, Flora, Hodge, Bri-Mathias, Ring-Jarvi, Ross, Bryce, Richard, Doubleday, Kate, Rose, Megan, Buster, Grant, and Rossol, > Michael. 2022. "ARPA-E PERFORM datasets". United States. https://dx.doi.org/10.25984/1891136. https://data.openei.org/submissions/5772.
+
+([return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL))
