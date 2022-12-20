@@ -105,7 +105,7 @@ with fs.open(s3_path, 'rb') as s3:
   with h5py.File(s3, 'r') as f:
     df_meta = pd.DataFrame(f['meta'][...])
     issue_time = pd.to_datetime(f['issue_time'][...].astype(str))
-    forecast_time = pd.to_datetime(f['forecat_time'][...].astype(str))
+    forecast_time = pd.to_datetime(f['forecast_time'][...].astype(str))
     wind_fcsts= f['forecasts'][...]
 ```
 
@@ -126,7 +126,7 @@ with fs.open(s3_path, 'rb') as s3:
   with h5py.File(s3, 'r') as f:
     df_meta = pd.DataFrame(f['meta'][...])
     issue_time = pd.to_datetime(f['issue_time'][...].astype(str))
-    forecast_time = pd.to_datetime(f['forecat_time'][...].astype(str))
+    forecast_time = pd.to_datetime(f['forecast_time'][...].astype(str))
     solar_fcsts = f['forecasts'][...]
 ```
 
@@ -147,7 +147,7 @@ with fs.open(s3_path, 'rb') as s3:
   with h5py.File(s3, 'r') as f:
     df_meta = pd.DataFrame(f['meta'][...])
     issue_time = pd.to_datetime(f['issue_time'][...].astype(str))
-    forecast_time = pd.to_datetime(f['forecat_time'][...].astype(str))
+    forecast_time = pd.to_datetime(f['forecast_time'][...].astype(str))
 ```
 
 ## CHANGLOG
@@ -191,7 +191,7 @@ with fs.open(s3_path, 'rb') as s3:
 - Regenerated files to fix the time index, dataset names, and file names
 - Added the second day forecasts for the day-ahead forecasts.
 
-### Change file naming convetion to:
+### Change file naming convention to:
 #### Load Actuals
 - BA_load_actuals_2018.h5
 - Zone_Far_West_load_actuals_2018.h5
