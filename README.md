@@ -5,6 +5,7 @@
 [Dataset access](#Dataset-access)  
 [Directory structure](#Directory-structure)  
 [File format](#File-format)  
+[Additional resources](#Additional-resources)   
 [Recommended citation](#Recommended-citation)  
 
 ## Overview of the ARPA-E PERFORM project
@@ -212,6 +213,14 @@ contain the following datasets with following shapes:
   - forecast_time (time-steps, )
 
 Examples for working with h5 file format can be found in the [ERCOT_demo.md](ERCOT_demo.md).
+
+([return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL))
+
+## Additional resources
+
+The following technical reports provide additional details on the datasets, including methods, validation, and error metrics:
+- Phase I dataset (ERCOT): https://www.nrel.gov/docs/fy23osti/79498.pdf.
+- Phase II datasets (MISO, NYISO, and SPP): https://www.nrel.gov/docs/fy24osti/83828.pdf. 
 
 ([return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL))
 
