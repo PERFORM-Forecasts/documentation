@@ -131,9 +131,9 @@ Data for each ISO is organized according to the following structure:
 
 - {ISO}/
   - MetaData/
-    - solar_meta.xlxs
-    - wind_meta.xlxs
-    - load_meta.xlxs
+    - solar_meta.xlxs (.csv for Phase II data)
+    - wind_meta.xlxs  (.csv for Phase II data)
+    - load_meta.xlxs  (.csv for Phase II data)
   - {YEAR}/
     - Solar/
       - Actuals/
