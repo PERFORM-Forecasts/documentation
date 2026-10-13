@@ -219,8 +219,8 @@ Examples for working with h5 file format can be found in the [ERCOT_demo.md](ERC
 ## Additional resources
 
 The following technical reports provide additional details on the datasets, including methods, validation, and error metrics:
-- Phase I dataset (ERCOT): https://www.nrel.gov/docs/fy23osti/79498.pdf.
-- Phase II datasets (MISO, NYISO, and SPP): https://www.nrel.gov/docs/fy24osti/83828.pdf. 
+- Phase I dataset (ERCOT): https://www.nlr.gov/docs/fy23osti/79498.pdf.
+- Phase II datasets (MISO, NYISO, and SPP): https://www.nlr.gov/docs/fy24osti/83828.pdf. 
 
 ([return to top](#ARPA-E-PERFORM-datasets-produced-by-NREL))
 
